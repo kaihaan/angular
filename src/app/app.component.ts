@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project';
+  showPage: string = 'recipes'
+
+  onShowPage(event) {
+    // either recipes OR shopping-list
+    this.showPage = event
+  }
 
 }

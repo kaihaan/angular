@@ -1,3 +1,4 @@
+import { Recipe } from '../shared/recipe.model';
 import { Component } from '@angular/core'
 
 @Component({
@@ -7,5 +8,11 @@ import { Component } from '@angular/core'
 })
 
 export class RecipeBook {
+  recipe: Recipe
+
+  onRecipeClicked(recipe: Recipe) {
+    console.log('Click - in Recipe Book')
+    this.recipe = recipe
+  }
 
 }

@@ -18,4 +18,10 @@ export class ShoppingListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onAction(actionMsg: {action: string, payload: Ingredient}) {
+    if(actionMsg.action === 'add') {
+      this.ingredients.push(actionMsg.payload)
+    }
+  }
+
 }
